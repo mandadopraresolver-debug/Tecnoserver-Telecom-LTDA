@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnoserver Telecom - Conectando Você ao Mundo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ffcc;
+            --secondary: #0072ff;
+            --dark: #070b19;
+            --darker: #04060f;
+            --light: #ffffff;
+            --gray: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: var(--darker);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--light);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: var(--darker);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #0f1c3f 0%, var(--dark) 70%);
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--light), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+
+        .services {
+            padding: 100px 50px;
+            background: var(--darker);
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 600;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--dark);
+        }
+
+        .contact-box {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .contact-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .contact-info strong {
+            color: var(--light);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: var(--darker);
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            header {
+                padding: 20px;
+            }
+            .services {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TECNOSERVER<span>.</span></div>
+        <a href="#contato" class="cta-btn">Central de Atendimento</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Alta Velocidade e Conexão Sem Limites</h1>
+            <p>Levando internet de alta performance e soluções avançadas em redes para impulsionar a sua casa ou o seu negócio.</p>
+            <a href="#servicos" class="cta-btn" style="padding: 15px 35px; font-size: 1.1rem;">Nossos Serviços</a>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <h2>O que Oferecemos</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Internet Fibra Óptica</h3>
+                <p>Navegue, jogue e trabalhe sem quedas. Conexão estável com altíssima velocidade de download e upload.</p>
+            </div>
+            <div class="service-card">
+                <h3>Redes e Infraestrutura</h3>
+                <p>Soluções completas em projetos de redes corporativas e residenciais com o mais alto padrão técnico.</p>
+            </div>
+            <div class="service-card">
+                <h3>Suporte Especializado</h3>
+                <p>Equipe técnica qualificada pronta para garantir o suporte rápido e eficiente que você precisa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contato">
+        <div class="contact-box">
+            <h2>Entre em Contato</h2>
+            <div class="contact-info">
+                <p><strong>Empresa:</strong> Rede Internet Tecnoserver Telecom LTDA</p>
+                <p><strong>CNPJ:</strong> 06.936.240/0001-89</p>
+                <p><strong>Endereço:</strong> Rua Guimarães Junior, 275 - Loja, Nova Era</p>
+                <p>Juiz de Fora - MG — CEP: 36087-390</p>
+                <p><strong>Telefone:</strong> <a href="tel:3232237372">(32) 3223-7372</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:decisaocont@veloxmail.com.br">decisaocont@veloxmail.com.br</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Tecnoserver Telecom. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
